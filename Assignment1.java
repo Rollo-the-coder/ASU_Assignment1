@@ -6,24 +6,26 @@
 
 import java.util.Scanner;
 
+
+// A class to take user input about a pizza party and give back how the pizza should be divided among guests
 class Assignment1
 {
     public static void main(String args[])
     {
-        Scanner in = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        //Input Collection
+        //Pizza Input Collection
         System.out.print("\nNumber of pizzas purchased        : ");
-        int pizzasPurchased = in.nextInt();
+        int pizzasPurchased = sc.nextInt();
 
         System.out.print("Number of slices per pizza        : ");
-        int numberSlices = in.nextInt();
+        int numberSlices = sc.nextInt();
 
         System.out.print("Number of adults                  : ");
-        int numberAdults = in.nextInt();
+        int numberAdults = sc.nextInt();
 
         System.out.print("Number of children                : ");
-        int numberChildren = in.nextInt();
+        int numberChildren = sc.nextInt();
 
         //Computation of inputs
         int totalSlices = numberSlices * pizzasPurchased;
@@ -32,7 +34,7 @@ class Assignment1
         int childSlicesRecieved = childrenTotalSlices / numberChildren;
         int slicesLeftOver = totalSlices - adultSlices - (childSlicesRecieved * numberChildren);
 
-        //Output Statements
+        //Output Statements / Results
         System.out.println("\nTotal number of slices of pizza               : " + totalSlices);
         System.out.println("Total number of slices given to adults        : " + adultSlices);
         System.out.println("Total number of slices available for children : " + childrenTotalSlices);
@@ -40,6 +42,6 @@ class Assignment1
         System.out.println("Number of slices left over                    : " + slicesLeftOver);
 
 
-        
+        sc.close();
     }
 }
